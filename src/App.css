@@ -6,10 +6,15 @@ header {
 }
 
 header .inner {
-  width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
+  /* width: 1300px; /* This is the inner width of the content inside of your header (80%, etc) */
+  /* height: 100%; */
+  /* display: block;
+  margin: 0 auto; */
   height: 100%;
-  display: block;
-  margin: 0 auto;
+  margin: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header .logo {
@@ -119,12 +124,8 @@ header nav a {
   background: #e5e5e5;
   border: 3px solid #000000;
   font-family: "Roboto";
+  margin: 40px;
 }
-
-/* .moveToLeft {
-  float: left;
-  text-align: left;
-} */
 
 /* Footer Css */
 
@@ -175,4 +176,104 @@ header nav a {
   /* identical to box height */
 
   color: #ffffff;
+}
+
+/* Search bar css */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+
+  clip-path: inset(50%);
+
+  height: 1px;
+
+  overflow: hidden;
+
+  position: absolute;
+
+  white-space: nowrap;
+
+  width: 1px;
+}
+
+.sortBy {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.searchInner {
+  display: flex;
+  height: 100%;
+  margin: 20px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Car Details Page Css style */
+
+.detailsPageContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
+
+.carDetails {
+  width: 800px;
+  height: 600px;
+}
+
+.bookingDetails {
+  width: 550px;
+  height: 600px;
+  border: 1px solid #ff7bac;
+  box-shadow: 11px 12px 4px rgba(255, 123, 172, 0.25);
+}
+
+.carDivison {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 20px;
+}
+
+.carName {
+  margin: 20px;
+}
+
+.carImage {
+  width: 600px;
+  height: 400px;
+}
+
+.carImage img {
+  height: 400px;
+}
+
+.carDate {
+  width: 100px;
+  height: 400px;
+}
+
+.carDesc {
+  height: 60px;
+  width: 600px;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+.carDesc p {
+  line-height: 0px;
+}
+
+.carBlack {
+  height: 60px;
+  background-color: #000000;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  color: pink;
+  font-size: large;
 }

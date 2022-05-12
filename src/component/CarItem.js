@@ -4,7 +4,7 @@ function CarItem({ car }) {
   return (
     <div className="CarItem">
       <div>
-        <img style={{ width: "300px" }} src={car.image} />
+        <img style={{ width: "350px", height: "250px" }} src={car.image} />
       </div>
       <div style={{ margin: "0 0 0 30px" }}>
         {car.name} {car.battery}kWh

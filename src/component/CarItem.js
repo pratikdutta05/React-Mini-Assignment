@@ -7,15 +7,14 @@ function CarItem({ car }) {
         <img style={{ width: "300px" }} src={car.image} />
       </div>
       <div style={{ margin: "0 0 0 30px" }}>
-        {car.name}
-        {car.battery}kWh
+        {car.name} {car.battery}kWh
       </div>
       <div>
-        <div>abc efficiency</div>
-        <div>abc efficiency</div>
+        <div>{car.efficiency} kWh/miles</div>
+        <div>Efficiency</div>
       </div>
       <div>
-        <button>Explore</button>
+        <button className="exploreButton">Explore</button>
       </div>
     </div>
   );

@@ -31,13 +31,6 @@ const CarContainer = () => {
 
   return (
     <div className="CarContainer">
-      {/* <div className='CarItem'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZUVqLzTZtavDFP3m6XhXdNDpzPo9XrLPOQ&usqp=CAU'/></div>
-              <div className='CarItem'><img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*'/></div>
-              <div className='CarItem'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZUVqLzTZtavDFP3m6XhXdNDpzPo9XrLPOQ&usqp=CAU'/></div>
-              <div className='CarItem'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZUVqLzTZtavDFP3m6XhXdNDpzPo9XrLPOQ&usqp=CAU'/></div>
-              <div className='CarItem'><img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDZUVqLzTZtavDFP3m6XhXdNDpzPo9XrLPOQ&usqp=CAU'/></div>
-              <div className='CarItem'><img src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/2019-honda-civic-sedan-1558453497.jpg?crop=1xw:0.9997727789138833xh;center,top&resize=480:*'/></div> */}
-
       {cars.map((car) => {
         return <CarItem car={car} />;
       })}

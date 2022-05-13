@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function CarItem({ car }) {
   return (
@@ -14,7 +15,9 @@ function CarItem({ car }) {
         <div>Efficiency</div>
       </div>
       <div>
-        <button className="exploreButton">Explore</button>
+        <NavLink to={"/home/electric_cars/" + car.id}>
+          <button className="exploreButton">Explore</button>
+        </NavLink>
       </div>
     </div>
   );

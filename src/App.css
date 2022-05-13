@@ -171,19 +171,7 @@ header nav a {
 .contactus {
   float: right;
   text-align: right;
-  /* position: absolute;
-  width: 158px;
-  height: 38px;
-  left: 1693px;
-  top: 911px;
-
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 38px;
-  /* identical to box height */
-
+  margin-right: 50px;
   color: #ffffff;
 }
 
@@ -290,6 +278,7 @@ header nav a {
   flex-direction: row;
   color: pink;
   font-size: large;
+  margin-bottom: 5px;
 }
 
 /* booking Details Css */

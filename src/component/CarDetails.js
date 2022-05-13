@@ -1,15 +1,39 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-function CarDetails() {
+function CarDetails(props) {
+  const { id } = useParams();
+
+  const [car, setCar] = useState([]);
+
+  const getCar = async () => {
+    await axios
+
+      .get("https://627ca708bf2deb7174de4ade.mockapi.io/car/v1/allCars/" + id)
+
+      .then((response) => {
+        setCar(response.data);
+      })
+
+      .catch((error) => console.log(error));
+  };
+
+  useEffect(() => {
+    getCar();
+  }, []);
+
   return (
     <div className="detailsPageContainer">
       <div className="carDetails">
         <div className="carName">
-          <p>Browse Car > Renault ZOE ZE50 R153 GT Line(rapid)</p>
+          <p>
+            {"Browse Car > "} {car.name}
+          </p>
         </div>
         <div className="carDivison">
           <div className="carImage">
-            <img src="https://bpchargemaster.com/wp-content/uploads/2021/06/Renault-Zoe-50.jpg"></img>
+            <img src={car.image}></img>
           </div>
           <div className="carDate">
             <h5>Available From</h5>
@@ -19,12 +43,12 @@ function CarDetails() {
         <div className="carDesc">
           <div>
             <p>Range</p>
-            <p>120/miles</p>
+            <p>{car.efficiency}/miles</p>
             <p>Real World</p>
           </div>
           <div>
             <p>Charging</p>
-            <p>50 kW</p>
+            <p>{car.battery} kW</p>
             <p>max. Speed</p>
           </div>
         </div>
@@ -38,8 +62,8 @@ function CarDetails() {
       </div>
       <div className="bookingDetails">
         <div className="bookingCarName">
-          <p>Renault ZOE ZE50</p>
-          <p>R135 GT Line(Rapid) 52kWh</p>
+          <p>{car.name}</p>
+          <p>{car.battery}kWh</p>
         </div>
         <div className="subcriptionLength">
           <div className="frontStyle">Min. Subscription Length</div>

@@ -32,6 +32,7 @@ const CarContainer = () => {
   //   ];
 
   const [cars, setCars] = useState([]);
+  const [filtered, setFiltered] = useState([]);
 
   const getCars = async () => {
     await axios
@@ -46,11 +47,37 @@ const CarContainer = () => {
     getCars();
   }, []);
 
+  const shortCars = (value) => {
+    const _cars = [...cars];
+    if (value === "low") {
+      _cars.sort((a, b) => a.emi - b.emi);
+    } else if (value === "high") {
+      _cars.sort((a, b) => b.emi - a.emi);
+    }
+
+    setCars(_cars);
+  };
+
+  const handleSearch = (searchkey) => {
+    const _cars = [...cars];
+    let _filter = [];
+    if (searchkey) {
+      _filter = _cars.filter((car) => {
+        return car.name.toLowerCase().includes(searchkey.toLowerCase());
+      });
+    }
+
+    setFiltered(_filter);
+  };
+
+  const filteredList = filtered.length > 0 ? filtered : cars;
+
   return (
     <div>
-      <SearchBar />
+      <SearchBar shortCars={shortCars} handleSearch={handleSearch} />
       <div className="CarContainer">
-        {cars.map((car) => {
+        {console.log(filteredList, cars, filtered)}
+        {filteredList.map((car) => {
           return <CarItem car={car} />;
         })}
       </div>

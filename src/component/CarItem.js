@@ -3,12 +3,12 @@ import { NavLink } from "react-router-dom";
 
 function CarItem({ car }) {
   return (
-    <div className="CarItem">
+    <div className="CarItem" key={car.id}>
       <div>
         <img style={{ width: "350px", height: "250px" }} src={car.image} />
       </div>
       <div style={{ margin: "0 0 0 30px" }}>
-        {car.name} {car.battery}kWh
+        {car.name} {car.battery}kWh {car.emi}
       </div>
       <div>
         <div>{car.efficiency} kWh/miles</div>

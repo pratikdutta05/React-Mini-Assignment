@@ -1,36 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "../App.css";
 
-const SearchBar = () => {
+const SearchBar = (props) => {
+  const [key, setKey] = useState();
+
+  const handleChange = (value) => {
+    setKey(value);
+  };
+
   return (
     <div className="searchInner">
       <div className="sortBy">
         <span>Sort By</span>
-        <select name="cars" id="cars">
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="opel">Opel</option>
-          <option value="audi">Audi</option>
+        <select
+          name="carSort"
+          id="cars"
+          onChange={(e) => props.shortCars(e.target.value)}
+        >
+          <option value="blank"></option>
+          <option value="low">Lowest Price</option>
+          <option value="high">Highest Price</option>
         </select>
       </div>
       <div className="searchBar">
-        <form action="/" method="get">
-          <label htmlFor="header-search">
-            <span style={{ margin: "30px" }} className="visually-hidden">
-              Search blog posts
-            </span>
-          </label>
+        <label htmlFor="header-search">
+          <span style={{ margin: "30px" }} className="visually-hidden">
+            Search blog posts
+          </span>
+        </label>
 
-          <input
-            type="text"
-            id="header-search"
-            placeholder="Search blog posts"
-            name="s"
-          />
+        <input
+          type="text"
+          id="header-search"
+          placeholder="Search Car"
+          name="s"
+          onChange={(e) => handleChange(e.target.value)}
+        />
 
-          <button type="submit">Search</button>
-        </form>
+        <button onClick={() => props.handleSearch(key)}>Search</button>
       </div>
     </div>
   );

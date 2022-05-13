@@ -60,6 +60,15 @@ header nav span {
   vertical-align: middle;
 }
 
+.headerFont {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+
+  color: #000000;
+}
+
 header nav a {
   color: #101010;
 }
@@ -254,6 +263,11 @@ header nav a {
 .carDate {
   width: 100px;
   height: 400px;
+  line-height: 0px;
+}
+
+.carDate p {
+  line-height: 0px;
 }
 
 .carDesc {
@@ -276,4 +290,89 @@ header nav a {
   flex-direction: row;
   color: pink;
   font-size: large;
+}
+
+/* booking Details Css */
+
+.monthContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 250px;
+  margin: 10px;
+}
+
+.bookingButton {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  background-color: #ff7bac;
+  width: 120px;
+  height: 66px;
+
+  color: #ffffff;
+}
+
+.milesContainer {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 400px;
+  margin: 10px;
+}
+
+.bookingCarName {
+  margin: 20px;
+  margin-bottom: 50px;
+}
+
+.bookingCarName p {
+  line-height: 0px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 8px;
+  /* identical to box height */
+
+  color: #000000;
+}
+.subcriptionLength {
+  margin: 20px;
+}
+
+.deliveryDate {
+  margin: 20px;
+}
+
+.bookNowDiv {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.bookNow {
+  width: 500px;
+  height: 60px;
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+  background: #ff7bac;
+}
+
+.dateBox {
+  box-shadow: 6px 4px 4px rgba(255, 123, 172, 0.66);
+  width: 400px;
+  height: 70px;
+}
+
+.frontStyle {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  color: #000000;
 }

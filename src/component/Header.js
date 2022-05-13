@@ -19,17 +19,17 @@ const Header = () => {
         <nav>
           <li>
             <span>
-              <a>Electric Cars</a>
+              <a className="headerFont">Electric Cars</a>
             </span>
           </li>
           <li>
             <span>
-              <a>Suitability Tool</a>
+              <a className="headerFont">Suitability Tool</a>
             </span>
           </li>
           <li>
             <span>
-              <a>My Booking</a>
+              <a className="headerFont">My Booking</a>
             </span>
           </li>
           <li>

@@ -309,8 +309,8 @@ header nav a {
   font-size: 28px;
   background-color: #ff7bac;
   width: 120px;
-  height: 66px;
-
+  height: 55px;
+  border: none;
   color: #ffffff;
 }
 
@@ -360,6 +360,7 @@ header nav a {
   font-weight: 700;
   font-size: 28px;
   color: #ffffff;
+  border: none;
   background: #ff7bac;
 }
 
